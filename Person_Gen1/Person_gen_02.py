@@ -8,7 +8,7 @@ Illegal = bool()
 
 rdint = random.randint
 
-class person:
+class Person:
 
     def cal(self, bdate):
         today = date.today()
@@ -27,6 +27,7 @@ class person:
     def name(self):
         fname = names.get_last_name()
         print(fname)
+
         if self.Gender == 'Male':
             sname = names.get_first_name('male')        
         elif self.Gender == 'Female':
@@ -53,7 +54,7 @@ class person:
         print(Age)
         print(bdate)
 
-    def place_of_birth():
+    def place_of_birth(self):
     
         Cb = ['Arizona', 'California', 'Colorado', 'Idaho', 'Montana', 'Nevada', 'New Mexico', 'Oregon', 'Utah', 'Washington', 'Wyoming', 'Illinois', 'Indiana','Iowa', 'Kansas','Michigan' 'Minnesota','Missouri', 'Nebraska', 'North Dakota', 'Ohio','South Dakota', 'Wisconsin','Alabama', 'Arkansas', 'Delaware', 'Florida', 'Georgia', 'Kentucky', 'Louisiana', 'Maryland', 'Mississippi', 'North Carolina', 'Oklahoma', 'South Carolina', 'Tennessee', 'Texas', 'Virginia', 'West Virginia', 'Connecticut', 'Maine','Massachusetts', 'New Hampshire', 'New Jersey', 'New York', 'Pensylvania', 'Vermont']
         Ws = [Cb[rdint(0, 10)]]    #11 állam
@@ -61,52 +62,20 @@ class person:
         Ss = [Cb[rdint(22, 37)]]   #16 állam
         Ns = [Cb[rdint(38,45)]]    #8 állam
 
-        place_of_birth = rdint(0, 100)
+        self.place_of_birth = rdint(0, 100)
 
-        if place_of_birth <= 25:
-            place_of_birth = Ws
-            print(place_of_birth)
+        if self.place_of_birth <= 25:
+            self.place_of_birth = Ws
+            print(self.place_of_birth)
 
-        elif place_of_birth >= 26 and place_of_birth <= 50:
-            place_of_birth = Mws
-            print(place_of_birth)
+        elif self.place_of_birth >= 26 and self.place_of_birth <= 50:
+            self.place_of_birth = Mws
+            print(self.place_of_birth)
 
-        elif place_of_birth >= 51 and place_of_birth <= 75:
-            place_of_birth = Ss
-            print(place_of_birth)
+        elif self.place_of_birth >= 51 and self.place_of_birth <= 75:
+            self.place_of_birth = Ss
+            print(self.place_of_birth)
 
         else:
-            place_of_birth = Ns
-            print(place_of_birth)
-
-    def invsys():
-        r = rdint(0,100)
-        drugs = ["drug_x", "drug_y", "drug_z"]
-        weapons = ["gun_a", "gun_b", "gun_c"]
-        average = ["av_v", "av_d", "av_n"]
-
-        illegal = []
-        illegal.append(drugs[rdint(0,2)])
-        illegal.append( weapons[rdint(0,2)])
-
-        npcinventory = []
-
-        if r <= 65:
-            Illegal == True
-            npcinventory.append(average[rdint(0,2)])
-            npcinventory.append(illegal)
-        else:
-            for x in range(2):
-                npcinventory.append(average[rdint(0,2)])
-            Illegal == False
-
-class Person:
-    p = person()
-    p.age()
-    p.Gender()
-    p.name()
-    person.place_of_birth()
-    person.invsys()
-
-for x in range(10000):
-    Person()
+            self.place_of_birth = Ns
+            print(self.place_of_birth) #
